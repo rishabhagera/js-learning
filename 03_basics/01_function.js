@@ -88,12 +88,12 @@ function handleObject(anyobject)
     console.log(`username is ${anyobject.username} and price is ${anyobject.price}`)
 }
 
-// handleObject(user) //compulsory object pass
+handleObject(user) //compulsory object pass
 
-handleObject({
-    username:"sam",
-    price:500
-})
+// handleObject({
+//     username:"sam",
+//     price:500
+// })
 
 
 //function in array

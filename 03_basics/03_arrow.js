@@ -46,9 +46,9 @@ const chai =()=>{
     let username = "rishabh"
     // console.log(this); {}
     // console.log(this.username);// work only in object not in function //undefined
-    
-}
+    }
 chai()
+
 
 
 
