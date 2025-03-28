@@ -42,3 +42,92 @@ title.innerHTML
 'DOM LEARNING For JS <span style="display: none;">text text he bhai</span>\n    '
 
 
+document.querySelector('ul')
+<ul>​<li>​…​</li>​<li>​…​</li>​<li>​…​</li>​</ul>​
+onst myul = document.querySelector('ul')
+VM1154:1 Uncaught SyntaxError: Unexpected identifier 'myul'Understand this errorAI
+const myul = document.querySelector('ul')
+undefined
+myul
+<ul>​…​</ul>​
+myul.querySelector('li')
+<li>​…​</li>​
+const turngreen = myul.querySelector('li')
+undefined
+turngreen.style.background="green"
+'green'
+turngreen.style.padding="10px"
+'10px'
+turngreen.innerText= "five"
+'five'
+
+
+
+document.querySelectorAll('li')
+NodeList(3) [li, li, li]
+const templist = document
+undefined
+const templist = document.querySelectorAll("li")
+undefined
+templist
+NodeList(3) [li, li, li]
+templist[0].style.color="green"
+'green'
+const myh1 =document.querySelectorAll('h1')
+undefined
+myh1
+NodeList [h1#title.heading]0: h1#title.headinglength: 1[[Prototype]]: NodeList
+myh1[0].style.color="green"
+'green'
+templist
+NodeList(3) [li, li, li]
+templist.forEach(function(l) {
+    l.style.backgroundcolor="green"
+})
+undefined
+templist.forEach(function(l) {
+    l.style.backgroundcolor='green'
+})
+undefined
+templist.forEach(function(l) {
+    l.style.backGroundColor='green'
+})
+undefined
+templist.forEach(function(l) {
+    l.style.backgroundColor='green'
+})
+undefined
+templist[0].style.color='white'
+'white'
+
+
+
+
+document.getElementsByClassName('list-item')
+HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+const tempclass = document.getElementsByClassName('list-item')
+undefined
+tempclass
+HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+tempclass.forEach(function(li){
+    console.log(li)
+})
+VM3208:1 Uncaught TypeError: tempclass.forEach is not a function
+    at <anonymous>:1:11
+(anonymous) @ VM3208:1Understand this errorAI
+Array.from(tempclass)
+(4) [li.list-item, li.list-item, li.list-item, li.list-item]0: li.list-item1: li.list-item2: li.list-item3: li.list-itemlength: 4[[Prototype]]: Array(0)at: ƒ at()concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()findLast: ƒ findLast()findLastIndex: ƒ findLastIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toReversed: ƒ toReversed()toSorted: ƒ toSorted()toSpliced: ƒ toSpliced()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()with: ƒ with()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {at: true, copyWithin: true, entries: true, fill: true, find: true, …}[[Prototype]]: Object
+const myconvertedarr =Array.from(tempclass)
+undefined
+myconvertedarr.forEach(function(li){
+    li.style.color="orange"
+})
+undefined
+
+
+const myh2 =document.querySelectorAll('mw-heading mw-heading3')
+undefined
+myh2.forEach(function(list){
+    list.style.color='red';
+    list.style.backgroundColor ='green'
+})

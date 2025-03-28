@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM FROM BASICS</title>
+</head>
+<body style="background-color:#212121;color:#fff;">
+    <ul class="language">
+        <li>JAVASCRIPT</li>
+    </ul>
+</body>
+
+</html>
+
+<script>
+function addLanguage(langName)
+{
+    const list = document.createElement('li')
+    list.innerHTML= `${langName}`
+    document.querySelector('.language').appendChild(list)
+}
+addLanguage("PYTHON")
+addLanguage("C++")
+
+function addoptlang(langName)
+{
+    const li = document.createElement('li')
+    li.appendChild(document.createTextNode(langName))
+    document.querySelector('.language').appendChild(li)
+}
+addoptlang('GOLANG')
+
+//edit
+const seclang =  document.querySelector("li:nth-child(2)")
+//seclang.innerHTML = "MONGO DB"
+const newli = document.createElement('li')
+newli.textContent = "MONGO DB"
+seclang.replaceWith(newli)
+
+//edit
+const firstlang = document.querySelector("li:first-child")
+firstlang.outerHTML = '<li> TYPESCRIPT </li>'
+
+//remove
+const rem = document.querySelector('li:last-child')
+rem.remove()
+
+</script>
