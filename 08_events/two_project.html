@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Testing Async </h1>
+    <button id ="stop">Stop</button>
+</body>
+</html>
+
+<script>
+    //this is method but also call API
+    //setTimeout(function(){
+    //    console.log("rishabh");
+    //},2000)
+
+    //reference given
+   
+    const changetext =function () 
+    {
+        document.querySelector('h1').innerHTML = "hy WEBSITE"
+    }
+        const rishabh =function()
+    {
+        console.log("rishabh")
+    }
+    //setTimeout(rishabh,2000);
+    const change= setInterval(changetext,2000);
+    //clearTimeout(change)
+
+    document.querySelector('#stop').addEventListener('click',
+    function(){
+        clearTimeout(change);
+        console.log("stop")
+    })
+
+</script>

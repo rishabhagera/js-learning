@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML EVENTS</title>
+</head>
+<body style="background-color:#212121; color:aliceblue">
+    <h2></h2>
+    <div>
+        <ul id="image">
+            <li><img weidth="350px" height ="300px" id="components" src ="C:\Users\DELL\Pictures\1.png" alt="photoshop"></li>
+            <li><img weidth="150px" height ="300px" id="yt" src ="C:\Users\DELL\Pictures\2.png"></li>
+            <li><img weidth="150px" height ="300px" id="family" src ="C:\Users\DELL\Pictures\3.jpg"></li>
+            <li><a style="color: #fff;"  href ="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+
+<script>
+    //document.getElementById('family').onclick = function()
+    //{
+    //    alert("family image click")
+    //}
+    //attachedEvent()
+    //jQuery - on
+    
+    //document.getElementById('family').addEventListener('click',function(e)
+   // {alert('family image clicked')},false)
+   // {console.log(e);},false)
+
+
+    //bubble mode 
+   // document.getElementById('image').addEventListener('click',function(e)
+   // {
+     //   console.log('click inside ul');
+   // },false) 
+  //  document.getElementById('family').addEventListener('click',function(e)
+ //   {
+//        console.log('click family');
+//    },false)
+
+    //capture mode
+   // document.getElementById('image').addEventListener('click',function(e)
+    //{
+    //    console.log('click inside ul');
+    //},true) 
+    //document.getElementById('family').addEventListener('click',function(e)
+    //{
+    //    console.log('click family');
+    //},true)
+
+
+    //document.getElementById('google').addEventListener('click', function(e){
+     //   e.preventDefault();
+     //   e.stopPropagation();
+    //    console.log("google clicked");
+       
+    //},false)
+
+    document.querySelector('#image').addEventListener('click',function(e){
+        //console.log(e.target.parentNode);
+        console.log(e.target.tagName);
+        if(e.target.tagName ==='IMG')
+        {
+            console.log(e.target.id);
+            let removeit =e.target.parentNode
+            removeit.remove()
+            // remove  it from ul side // remove.it.prentNode.removeChild(removeit)
+        }
+    },false)
+
+
+
+</script>
+</html>
