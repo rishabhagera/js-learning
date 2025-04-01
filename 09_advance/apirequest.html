@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style ="background-color:#212121; color:#fff;">
+    <div class ="mainContainer">
+    </div>
+</body>
+</html>
+<script>
+    //const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    //const xhr =  new XMLHttpRequest()
+    //xhr.open('GET',requestUrl)
+    //xhr.onreadystatechange = function ()
+    //{
+        //console.log(xhr.readyState)
+        //if (xhr.readyState === 4)
+        //{
+        //    const data = JSON.parse(this.responseText);
+        //    console.log(typeof data)
+        //    console.log(data.followers)
+        //} 
+    //}
+    //console.log(xhr.readyState)
+    //console.log('here');
+    //xhr.send();
+
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET',requestUrl)
+    xhr.onreadystatechange = function()
+    {
+        if(xhr.readyState === 4)
+        {
+            imageJSON = JSON.parse(this.responseText)
+            //console.log(imageJSON.avatar_url)
+            card(imageJSON,'clickme')
+        }
+    }
+    xhr.send()
+
+    let imageJSON ='https://avatars.githubusercontent.com/u/11613311?v=4'
+    const imageURL = 'https://avatars.githubusercontent.com/u/11613311?v=4'
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    
+    function card(image,button)
+    {
+        const cardCon = document.createElement('div')
+        cardCon.classList.add('card')
+
+        const imageCon = document.createElement('img')
+        imageCon.src= image
+        imageCon.classList.add('image')
+
+        const buttonCon = document.createElement('button')
+        buttonCon.classList.add('button')
+
+        cardCon.appendChild(imageCon)
+        cardCon.appendChild(buttonCon)
+        
+        const container = document.getElementById('mainContainer')
+        container.appendChild(cardCon) 
+    }
+</script>
